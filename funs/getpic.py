@@ -13,7 +13,7 @@ data = re.compile(pat).findall(url)                 #将正则匹配到结果赋
 #urlretrieve是一个将结果存储下来的方法具体使用看下面,增加一个判断链接失效就跳过
 for i in data:
     try:
-        urllib.request.urlretrieve(imageurl,finename='xxx')
+        urllib.request.urlretrieve(imageurl,'ospath\' + finename='xxx')
         excepet urllib.error.URLError as e:
             if hasattr(e,'code'):
                 print(e,'code')
